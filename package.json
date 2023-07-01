@@ -1,0 +1,29 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.6.6",
+    "@nuxt/devtools": "latest",
+    "@types/node": "^18",
+    "cz-customizable": "^7.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "nuxt": "^3.6.1",
+    "typescript": "^5.1.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
+    }
+  }
+}
