@@ -1,8 +1,9 @@
 import { nuxtContext } from '@nuxt/types'
 import { coreFunctionList } from '@/types/ICore.ts'
-import TemplateFabric from '@/core/fabrics/modules/TemplateFabric.ts'
+import BannerFabric from '@/core/fabrics/modules/BannerFabric.ts'
+import ProductFabric from '@/core/fabrics/modules/ProductFabric.ts'
 
-const fabricList: coreFunctionList = [TemplateFabric]
+const fabricList: coreFunctionList = [BannerFabric, ProductFabric]
 
 export default (context: nuxtContext) => {
   class FabricsLocator {}

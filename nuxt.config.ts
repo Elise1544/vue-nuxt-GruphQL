@@ -9,6 +9,12 @@ export default defineNuxtConfig({
       name: 'layout'
     }
   },
+  runtimeConfig: {
+    public: {
+      baseApiUrl: process.env.API_BASE_URL,
+      nodeEnv: process.env.NODE_ENV
+    }
+  },
   css: [{ src: '@/assets/styles/index.scss', lang: 'scss' }],
   vite: {
     css: {
@@ -23,5 +29,15 @@ export default defineNuxtConfig({
       }
     }
   },
-  modules: ['@nuxtjs/stylelint-module', '@nuxtjs/eslint-module', ['@pinia/nuxt', { disableVuex: false }], 'nuxt-icons']
+  modules: [
+    '@nuxtjs/stylelint-module',
+    '@nuxtjs/eslint-module',
+    ['@pinia/nuxt', { disableVuex: false }],
+    'nuxt-icons',
+    'nuxt-lazy-load'
+  ],
+  lazyLoad: {
+    loadingClass: 'isImageLoading',
+    directiveOnly: true
+  }
 })

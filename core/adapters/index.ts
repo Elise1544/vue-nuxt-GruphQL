@@ -1,8 +1,9 @@
 import { nuxtContext } from '@nuxt/types'
 import { coreFunctionList } from '@/types/ICore.ts'
-import TemplateAdapter from '@/core/adapters/modules/TemplateAdapter.ts'
+import BannerAdapter from '~/core/adapters/modules/BannerAdapter.ts'
+import ProductAdapter from '~/core/adapters/modules/ProductAdapter.ts'
 
-const adapterList: coreFunctionList = [TemplateAdapter]
+const adapterList: coreFunctionList = [BannerAdapter, ProductAdapter]
 
 export default (context: nuxtContext) => {
   class AdaptersLocator {}

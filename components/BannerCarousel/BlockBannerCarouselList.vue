@@ -23,7 +23,7 @@
     </component>
     <div v-if="!loading" class="pagination-list">
       <button
-        v-for="paginationItem in banners"
+        v-for="(paginationItem, index) in banners"
         :key="`pagination-item-${paginationItem.id}`"
         type="button"
         class="pagination-list__item"
@@ -35,6 +35,8 @@
 </template>
 
 <script setup>
+import BlockBannerCarouselItem from './BlockBannerCarouselItem.vue'
+
 defineProps({
   sliderSettings: {
     type: Object,
@@ -119,4 +121,3 @@ $white: $WHITE;
   }
 }
 </style>
-"
